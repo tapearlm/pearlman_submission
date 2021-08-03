@@ -11,3 +11,7 @@ class Patient(models.Model):
 class Appointment(models.Model):
     start_time = models.DateTimeField(auto_now=False)
     end_time = models.DateTimeField(auto_now=False)
+    
+    # Each appointment is mapped to one patient and one doctor
+    patient = models.ForeignKey(Patient, on_delete=models.SET_NULL, blank=True, null=True)
+    # doctor = models.ForeignKey(Doctor, on_delete=models.SET_NULL, blank=True, null=True)

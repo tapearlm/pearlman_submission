@@ -36,6 +36,7 @@ const CreateAppointment = ({ refetchAppointments }) => {
     setIsLoading(false);
   };
 
+    
   return (
     <>
       <h2>Create a new Appointment</h2>
